@@ -118,7 +118,16 @@ tissue-specific and tumor-specific markers:
 | PRAD  | KLK3, KLK2, TMPRSS2  | PSA gene, prostate-specific markers  |
 | COAD  | CDX2, MUC2, FABP1/2  | Intestinal master regulator, mucins  |
 | BRCA  | XIST, SCGB2A2        | Female-specific, mammaglobin         |
-| LUSC  | KRT6C, SERPINB13     | Squamous epithelium markers          |
+| LUAD  | RPL37P2, CALML3      | Shared pulmonary markers — see note  |
+| LUSC  | KRT6C, SERPINB13, LGALS7B | Squamous epithelium differentiation markers |
+
+*LUAD and LUSC share several top SHAP genes (RPL37P2, CALML3, SPRR2E), 
+consistent with their common pulmonary origin. This overlap explains 
+the partial misclassification between the two lung subtypes and 
+suggests that their transcriptomic differences are quantitative 
+rather than qualitative — a finding supported by the lower F1 scores 
+compared to the other three tumor types.*
+
 
 Pathway enrichment confirms these findings: PRAD shows significant 
 enrichment in the KEGG "Prostate cancer" pathway (p-adj < 0.001); COAD 
